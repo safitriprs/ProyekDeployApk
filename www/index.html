@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link style  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Submission Dicoding</title>
+  </head>
+  <body>
+    <!-- header website beserta navbar -->
+    <header>
+      <!-- navbar  -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#front-end">Layanan Komputasi</a></li>
+          <li><a href="#back-end">Layanan Data</a></li>
+          <li><a href="#fullstack">Layanan Jaringan</a></li>
+        </ul>
+      </nav>
+      <!-- header  -->
+      <div class="slider">
+        <div class="slide">
+          <img src="images/cloud.png" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="images/cloud-2.webp" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="images/cloud-3.jpg" alt="Slide 3" />
+        </div>
+        <a class="prev" onclick="prevSlide()">&#10094;</a>
+        <a class="next" onclick="nextSlide()">&#10095;</a>
+      </div>
+    </header>
+
+    <!-- isi content  -->
+    <main>
+      <div id="content">
+        <article class="card" id="artikel">
+          <h2>Google Cloud</h2>
+          <div class="menu-item">
+            <img src="images/compute.png" alt="compute" />
+            <h3><a href="#front-end">Layanan Komputasi</a></h3>
+          </div>
+          <div class="menu-item">
+            <img src="images/database.jpeg" alt="database" />
+            <h3><a href="#back-end">Layanan Data</a></h3>
+          </div>
+          <div class="menu-item">
+            <img src="images/networking.jpg" alt="networking" />
+            <h3><a href="#fullstack">Layanan Jaringan</a></h3>
+          </div>
+        </article>
+
+        <article class="card" id="front-end">
+          <h2>Layanan Komputasi</h2>
+          <p>
+            Layanan komputasi merupakan komponen terpenting dalam menjalankan sebuah aplikasi. Setiap aplikasi memerlukan mesin yang memproses dan menjalankan programnya. 
+            Google Cloud menyediakan beberapa opsi layanan komputasi yang bisa digunakan sesuai dengan kebutuhan.
+          </p>
+          <section>
+            <h3>Compute Engine</h3>
+            <img src="images/gce.png" alt="GCE" class="content-image" />
+            <p>
+              Layanan Compute Engine menyediakan virtual machine (VM) yang aman dan customizable (dapat dikustomisasi). 
+              VM instance yang Anda buat akan berjalan di data center Google yang terhubung dengan jaringan fiber di seluruh dunia.
+              Compute Engine menawarkan beberapa fitur seperti berikut.
+            </p>
+            <ul>
+              <li>Virtual machine dengan kinerja pemrosesan dan penyimpanan yang tinggi.</li>
+              <li>Auto scaling (penyesuaian kapasitas otomatis) dan load balancer (pembagian beban) untuk VM yang bersifat homogen/identik.</li>
+              <li>Akses langsung ke GPU yang bisa digunakan untuk mempercepat kinerja.</li>
+              <li>Dukungan berbagai versi dari sistem operasi seperti Linux dan Windows.</li>
+              <li>Preemptible VM (instance yang dapat terhenti kapan saja tergantung pada system event) yang dapat 
+                dibuat dan dijalankan dengan harga yang lebih rendah daripada VM normal.</li>
+            </ul>
+            <p>
+              Compute Engine cocok digunakan bagi Anda yang memerlukan kontrol penuh atas infrastruktur dan akses langsung ke hardware seperti GPU dan SSD. 
+              Anda juga dapat memindahkan data pada data center atau colocation menuju cloud dengan menggunakan layanan ini.
+            </p>
+          </section>
+          <section>
+            <h3>Google Kubernetes Engine</h3>
+            <img src="images/gke-3.png" alt="GKE" class="content-image" />
+            <p>
+              Google Kubernetes Engine adalah layanan dari Google Cloud untuk mengelola Kubernetes. 
+              Kubernetes sendiri adalah sebuah container orchestrator yang berfungsi untuk menjalankan container di dalam VM cluster, memantau kondisi container, dan mengelola siklus hidup dari VM instance.
+            </p>
+          </section>
+          <section>
+            <h3>Cloud Run</h3>
+            <img src="images/cloudrun.jpg" alt="CLOUDRUN" class="content-image" />
+            <p>
+              Cloud Run adalah layanan komputasi terkelola dari Google yang memungkinkan Anda untuk menjalankan container dengan mudah di infrastrukturnya Google yang terkenal sangat scalable. 
+              Berbeda dengan layanan Google Kubernetes Engine (yang kita bahas di materi sebelumnya) di mana kita harus meluncurkan cluster, membuat deployment, mengelola pod, dan komponen Kubernetes lainnnya untuk menjalankan aplikasi dalam container (containerized application), 
+              Cloud Run menghilangkan semua kerumitan tersebut sehingga memudahkan Anda sebagai Developer untuk men-deploy aplikasi di Google Cloud.
+            </p>
+          </section>
+        </article>
+
+        <article class="card" id="back-end">
+          <h2>Layanan Data</h2>
+          <p>
+            Ketahuilah bahwa setiap aplikasi pastinya memiliki jenis penyimpanan (storage) dan basis data (database) yang berbeda-beda. Untungnya, Google Cloud menyediakan berbagai layanan data yang lengkap dan beragam demi menyesuaikan kebutuhan pengembangan aplikasi.
+            Beragam jenis data yang didukung mulai dari data terstruktur, semi terstruktur, hingga tidak terstruktur; kemudian transaksional ataupun relasional; dapat disimpan di Google Cloud dengan aman dan mudah. 
+            Berikut layanan-layanan data yang ditawarkan oleh Google Cloud, antara lain: <br />
+          </p>
+          <ul>
+            <li>Cloud Storage: Layanan penyimpanan berbasis object (berkas utuh) yang aman dan tangguh.</li>
+            <li>Persistent Disk: Layanan penyimpanan berbasis block (data disimpan menjadi blok-blok dengan ukuran yang sama) berperforma tinggi yang cocok digunakan sebagai penyimpanan untuk VM instance yang berjalan di Google Cloud.</li>
+            <li>Cloud SQL: Layanan database relasional yang dikelola sepenuhnya oleh Google Cloud yang memberikan kemudahan dalam mengatur, memelihara, dan mengelola database engine seperti MySQL, PostgreSQL, dan SQL Server.</li>
+            <li>Cloud Spanner: Layanan database relasional berskala global yang sepenuhnya dibangun untuk menawarkan skala tak terbatas dan ketersediaan 99.999%.</li>
+          </ul>
+          <p>
+            Data tak hanya terbatas pada pembicaraan storage dan database saja. Kita semua tahu bahwa data berperan penting dalam bisnis. Dengan analisis yang tepat, 
+            perusahaan akan mendapatkan wawasan bisnis yang komprehensif dalam mendukung pergerakan bisnisnya.
+          </p>
+
+          <section>
+            <h3>Cloud Storage</h3>
+            <img src="images/cloudstorage.png" alt="cloudstorage" class="content-image" />
+            <p>
+              Cloud Storage adalah layanan penyimpanan dari Google Cloud yang ditujukan untuk menyimpan berkas berbasis object. <br />
+
+              Object adalah sebuah data individual tak terstruktur (maksudnya, berkas apa pun seperti audio, video, dokumen, gambar, dsb) yang dapat disimpan pada penyimpanan cloud. <br />
+
+              Ketika membuat bucket di Cloud Storage, kita perlu menentukan storage class alias kelas penyimpanan yang akan digunakan:
+            </p>
+            <ol>
+              <li>Standard: Jenis penyimpanan untuk data yang sering diakses dan/atau disimpan hanya untuk periode waktu yang singkat. </li>
+              <li>Nearline: Jenis penyimpanan yang tangguh dengan harga rendah untuk data yang jarang diakses.</li>
+              <li>Coldline: Jenis penyimpanan yang tangguh dengan harga yang sangat rendah untuk data yang jarang diakses. </li>
+              <li>Archive: Jenis penyimpanan yang tangguh dengan harga yang paling rendah untuk pengarsipan data.</li>
+            </ol>
+
+            <p>
+              Dengan mampu membedakan kasus penggunaan untuk setiap storage class, 
+              memudahkan Anda dalam memilih jenis penyimpanan yang tepat untuk kebutuhan aplikasi.
+            </p>
+          </section>
+
+          <section>
+            <h3>Persistent Disk</h3>
+            <img src="images/presisten.jpg" alt="presisten" class="content-image" />
+            <p>
+              Persistent Disk adalah layanan penyimpanan berbasis block dengan performa tinggi untuk VM instance di Google Cloud. Persistent Disk menyediakan penyimpanan SSD (solid state drive) dan HDD (hard disk drive) yang dapat dipasangkan ke VM instance pada Compute Engine atau Google Kubernetes Engine. 
+              Bila ingin menambahkan persistent disk (PD) ke suatu VM instance, Anda bisa memilih salah satu disk type berikut:
+            </p>
+            <ol>
+              <li>Zonal Standard PD: Penyimpanan berbasis block yang efisien dan dapat diandalkan.</li>
+              <li>Regional Standard PD: Penyimpanan berbasis block yang efisien dan dapat diandalkan dengan replikasi secara sinkronis di 2 zone dalam sebuah region.</li>
+              <li>Zonal Balanced PD: Penyimpanan berbasis block yang murah dan dapat diandalkan.</li>
+              <li>Regional Balanced PD: Penyimpanan berbasis block yang murah dan dapat diandalkan dengan replikasi secara sinkronis di 2 zone dalam sebuah region.</li>
+              <li>Zonal SSD PD: Penyimpanan berbasis block yang cepat dan dapat diandalkan.</li>
+              <li>Regional SSD PD: Penyimpanan berbasis block yang cepat dan dapat diandalkan dengan replikasi secara sinkronis pada 2 zone dalam sebuah region.</li>
+              <li>Zonal Extreme PD: Opsi penyimpanan berbasis block yang memiliki performa paling cepat.</li>
+            </ol>
+
+            <p>
+              Perlu Anda ketahui, selain persistent disk, terdapat juga Local SSD yang juga merupakan penyimpanan berbasis block untuk VM instance. 
+              Berbeda dengan persistent disk berlokasi terpisah dari VM instance, Local SSD terpasang secara fisik ke perangkat server yang menjalankan VM instance Anda.
+            </p>
+          </section>
+
+          <section>
+            <h3>Cloud SQL</h3>
+            <img src="images/sql.png" alt="sql" class="content-image" />
+            <p>
+              Cloud SQL adalah layanan database relasional dari Google Cloud yang menyediakan berbagai fitur untuk memudahkan kita dalam membuat, mengatur, dan mengelola database engine seperti MySQL, PostgreSQL, dan SQL Server. <br />
+              Perlu Anda ingat bahwa Cloud SQL merupakan layanan untuk memudahkan Anda dalam membuat database relasional (SQL), bukan untuk melakukan tugas-tugas administrasi pada database itu sendiri. Ada banyak database administration tools yang dapat Anda pilih, berikut beberapa di antaranya:
+            </p>
+            <ol>
+              <li>phpMyAdmin untuk MySQL.</li>
+              <li>MySQL Workbench untuk MySQL.</li>
+              <li>Toad Edge untuk MySQL dan PostgreSQL.</li>
+              <li>pgAdmin.org untuk PostgreSQL.</li>
+              <li>SQL Server Management Studio untuk SQL Server.</li>
+              <li>Visual Studio Code untuk SQL Server.</li>
+            </ol>
+
+            <p>
+              Bila Anda mengaktifkan public IP address pada Cloud SQL instance, Anda bisa mengakses database dari luar Google Cloud via internet menggunakan tools yang disebutkan di atas. Namun, bila Cloud SQL instance Anda hanya memiliki private IP address, Anda hanya bisa mengaksesnya melalui VPC network (misal, melalui Cloud Shell atau VM instance di dalam VPC network yang sama).
+            </p>
+          </section>
+
+          <section>
+            <h3>Cloud Bigtable</h3>
+            <img src="images/bigtable.png" alt="bigtable" class="content-image" />
+            <p>
+              Cloud Bigtable termasuk ke dalam jenis database nonrelasional alias NoSQL. Namun, tak seperti Firestore yang berorientasi document, Cloud Bigtable merupakan wide-column database. Sesuai dengan namanya, wide-column database menyimpan data dalam jumlah kolom yang besar (hingga ribuan kolom dan miliaran baris). 
+              Konsep wide-column sebenarnya mirip seperti tabel pada database relasional. Akan tetapi, setiap kolom tidak wajib diisi sehingga tak ada skema tetap yang menentukan struktur data. <br />
+
+              Jenis data yang biasa disimpan pada Cloud Bigtable antara lain:
+            </p>
+            <ol>
+              <li>Time-series data, contohnya seperti informasi penggunaan CPU dan memory dari waktu  ke waktu untuk beberapa server.</li>
+              <li>Marketing data, misalnya riwayat pembelian dan preferensi pelanggan pada aplikasi e-commerce.</li>
+              <li>Financial data, yakni seperti riwayat transaksi, harga saham, dan nilai tukar mata uang.</li>
+              <li>Internet of Things data, contohnya adalah laporan penggunaan energi dan informasi perangkat yang terhubung dengan Internet of Things.</li>
+              <li>Graph data, misalnya data seperti informasi bagaimana pengguna bisa saling terhubung satu sama lain.</li>
+            </ol>
+
+            <p>
+              Bigtable dirancang sebagai database berukuran besar, bahkan hingga terabyte dan petabyte sekalipun. Cloud Bigtable ideal untuk aplikasi yang membutuhkan throughput dan scalability yang tinggi dengan data berbentuk key/value (kunci dan nilai), yang mana tiap nilainya tak lebih dari 10 MB. 
+            </p>
+          </section>
+        </article>
+
+        <article class="card" id="fullstack">
+          <h2>Layanan Jaringan</h2>
+          <img src="images/networking.jpg" alt="networking" class="content-image" />
+          <p>
+            Google Cloud Platform (GCP) menyediakan beragam layanan jaringan yang memungkinkan pengguna untuk mengelola konektivitas dan jaringan mereka dengan efisien dan aman. <br />
+
+            Melalui layanan seperti Virtual Private Cloud (VPC), Load Balancing, dan Cloud Interconnect, pengguna dapat menciptakan lingkungan jaringan yang sesuai dengan kebutuhan mereka. Selain itu, GCP juga menawarkan alat keamanan jaringan, seperti Cloud Armor dan Cloud VPN, untuk melindungi aplikasi dan data mereka. 
+            Dengan kemampuan global routing dan layanan CDN, Google Cloud memastikan kinerja aplikasi yang optimal dengan mengurangi latensi dan meningkatkan kecepatan akses. Selain itu, pemantauan dan alat diagnostik yang disediakan oleh GCP membantu pengguna dalam memantau kinerja jaringan mereka dan mengidentifikasi masalah dengan cepat. <br />
+
+            Semua ini membuat Google Cloud menjadi pilihan yang kuat bagi organisasi yang mengandalkan jaringan yang andal dan aman untuk aplikasi mereka. <br />
+          </p>
+        </article>
+      </div>
+
+      <!-- side content  -->
+      <aside>
+        <article class="profile card">
+          <header>
+            <h2>Tentang Saya</h2>
+            <figure>
+              <img src="images/foto-saf.jpg" src="foto saf" />
+            </figure>
+          </header>
+          <section>
+            <table>
+              <tr>
+                <th>Nama</th>
+                <td>: Safitri Pradhistya Suwandi</td>
+              </tr>
+              <tr>
+                <th>Tempat Lahir</th>
+                <td>: Surabaya</td>
+              </tr>
+              <tr>
+                <th>Tanggal Lahir</th>
+                <td>: 07 Desember 2002</td>
+              </tr>
+              <tr>
+                <th>Domisili</th>
+                <td>: Surabaya</td>
+              </tr>
+              <tr>
+                <th>Status</th>
+                <td>: Mahasiswa</td>
+              </tr>
+              <tr>
+                <th>Kampus</th>
+                <td>: Universitas Pembangunan Nasional "Veteran" Jawa Timur</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>: safitripradhistya@gmail.com</td>
+              </tr>
+              <tr>
+                <th>Linkedin</th>
+                <td>: <a href="https://www.linkedin.com/in/safitri-pradhistya-suwandi-2b0150277" target="_blank">Safitri Pradhistya Suwandi</a></td>
+              </tr>
+              <tr>
+                <th>Instagram</th>
+                <td>: <a href="https://www.instagram.com/safitriprs/" target="_blank">safitriprs</a></td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
+    </main>
+
+    <!-- footer  -->
+    <footer>
+      <p>Menjadi Google Cloud Engineer &copy; 2023 Dicoding Indonesia</p>
+    </footer>
+
+    <!-- script  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
